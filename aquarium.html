@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    
+    <style type="text/css">
+
+        body{
+            background-image: url('ocean.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+             }
+
+        .box1{
+    		width:100px;
+            height:100px;
+    		border:1px solid black;
+    		display:inline-block;
+            background-color: rgb(251, 163, 99);
+    	   }
+
+        .box2{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+            display:inline-block;
+            background-color: rgb(160, 89, 157);
+           }
+
+        .box3{
+            width:100px;
+            height:100px;
+           /* border:1px solid black;*/
+            display:inline-block;
+            /*background-color: red;*/
+           }
+
+        .box4{
+            width:100px;
+            height:100px;
+            /*border:1px solid black;*/
+            display:inline-block;
+            /*background-color: red;*/
+           }
+
+    	.starfish{
+    	   position:absolute;
+    	   width:100px;
+    	   height:100px;
+    	   background-size:contain;
+    	   transition:2s;
+	       background-image:url(https://media1.giphy.com/media/eBb20laqXRFsOaaXcV/source.gif);
+    	   }
+
+        .squid{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background-size:contain;
+            transition:2s;
+            background-image:url(https://media1.giphy.com/media/QxMcFQAnhc5wpmQv4m/source.gif);
+        }
+
+        .turtle{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background-size:contain;
+            transition:2s;
+    background-image:url(https://media1.giphy.com/media/QxMcFQAnhc5wpmQv4m/source.gif);
+        }
+        
+    </style>
+    
+    
+</head>
+
+<body>
+    <div id="fish1" class="box1"></div>
+    <div id="fish2" class="box2"></div>
+    <div id="fish3" class="box3"></div>
+    <div id="fish4" class="box4"></div>
+</body>
+<script type="text/javascript">
+
+
+// WHERE STARFISH STARTS!!!!
+
+var button1 = document.getElementById("fish1");
+
+
+
+
+
+
+
+
+function makeStarfish() {
+    var starfish = document.createElement("div");
+
+    document.body.appendChild(starfish);
+
+
+    starfish.classList.add("starfish");
+function position() {
+    // var randomNumber =Math.random()*800;
+    starfish.style.left =   Math.random() * 900 + "px";
+
+    starfish.style.top =  Math.random() * 800 + "px";
+
+
+};
+
+setInterval(position, 1000)
+};
+
+
+button1.addEventListener("click", makeStarfish)
+
+
+
+
+
+// THIS IS WHERE SQUID STARTS!!!!
+
+var button2 = document.getElementById("fish2");
+
+
+
+
+
+
+
+
+function makeSquid() {
+    var squid = document.createElement("div");
+
+    document.body.appendChild(squid);
+
+
+    squid.classList.add("squid");
+
+    function position2() {
+    // var randomNumber =Math.random()*800;
+    squid.style.left =   Math.random() * 850 + "px";
+
+    squid.style.top =  Math.random() * 750 + "px";
+
+
+};
+};
+
+
+button2.addEventListener("click", makeSquid)
+
+
+
+
+setInterval(position2, 1000)
+
+// THIS IS WHERE TURTLE STARTS!!!!!
+
+var button3 = document.getElementById("fish3");
+
+
+
+
+
+
+
+function makeTurtle() {
+
+var turtle = document.createElement("div");
+
+    document.body.appendChild(turtle);
+
+
+    turtle.classList.add("turtle");
+function position3() {
+    // var randomNumber =Math.random()*800;
+    turtle.style.left =   Math.random() * 900 + "px";
+
+    turtle.style.top =  Math.random() * 800 + "px";
+
+
+};
+};
+
+
+button3.addEventListener("click", makeTurtle)
+
+
+
+
+setInterval(position3, 1000)
+</script>
+
+</html>
