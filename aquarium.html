@@ -2,9 +2,20 @@
 <html>
 
 <head>
+
+<!-- normal -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&display=swap" rel="stylesheet">
+
+
+<!-- bold -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&display=swap" rel="stylesheet">
+
     <title></title>
     
     <style type="text/css">
+
 
         body{
             background-image: url('ocean.jpg');
@@ -15,6 +26,7 @@
         .box1{
     		width:100px;
             height:100px;
+            border-radius: 50%;
     		border:1px solid black;
     		display:inline-block;
             background-color: rgb(251, 163, 99);
@@ -23,6 +35,7 @@
         .box2{
             width:100px;
             height:100px;
+            border-radius: 50%;
             border:1px solid black;
             display:inline-block;
             background-color: rgb(160, 89, 157);
@@ -31,18 +44,21 @@
         .box3{
             width:100px;
             height:100px;
-           /* border:1px solid black;*/
+            border-radius: 50%;
+            border:1px solid black;
             display:inline-block;
-            /*background-color: red;*/
+            background-color: rgb(205, 241, 131);
            }
 
         .box4{
             width:100px;
             height:100px;
-            /*border:1px solid black;*/
+            border-radius: 50%;
+            border:1px solid black;
             display:inline-block;
-            /*background-color: red;*/
+            background-color: rgb(250, 174, 194);
            }
+
 
     	.starfish{
     	   position:absolute;
@@ -68,19 +84,75 @@
             height:100px;
             background-size:contain;
             transition:2s;
-    background-image:url(https://media1.giphy.com/media/QxMcFQAnhc5wpmQv4m/source.gif);
+            background-image:url(https://i.pinimg.com/originals/0f/7b/fa/0f7bfa4e6775b5977694a6036fc85b48.png);
+        }
+
+        .seahorse{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background-size:contain;
+            transition:2s;
+            background-image:url(seahorse.png);
+        }
+
+
+        #title{
+            font-family: 'Advent Pro', sans-serif;
+            font-size: 50px
+
+        }
+
+        #desc{
+            font-family: 'Advent Pro', sans-serif;
+            font-size: 25px;
+            text-decoration: bold;
         }
         
+        #fish1{
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Advent Pro', sans-serif;
+
+        }
+
+        #fish2{
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Advent Pro', sans-serif;
+        }
+
+        #fish3{
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Advent Pro', sans-serif;
+
+        }
+
+        #fish4{
+            text-align: center;
+            line-height: 100px;
+            font-family: 'Advent Pro', sans-serif;
+        }
+
     </style>
     
     
 </head>
 
 <body>
-    <div id="fish1" class="box1"></div>
-    <div id="fish2" class="box2"></div>
-    <div id="fish3" class="box3"></div>
-    <div id="fish4" class="box4"></div>
+
+<center><div id="title">Welcome to the Aquarium!</div></center>
+
+<br>
+
+<div id="desc">click on these buttons in order to add more aquatic animals to the tank!</div>
+    <div id="fish1" class="box1">starfish</div>
+    <div id="fish2" class="box2">squid</div>
+    <div id="fish3" class="box3">turtle</div>
+    <div id="fish4" class="box4">seahorse</div>
+
+
 </body>
 <script type="text/javascript">
 
@@ -88,12 +160,6 @@
 // WHERE STARFISH STARTS!!!!
 
 var button1 = document.getElementById("fish1");
-
-
-
-
-
-
 
 
 function makeStarfish() {
@@ -105,9 +171,9 @@ function makeStarfish() {
     starfish.classList.add("starfish");
 function position() {
     // var randomNumber =Math.random()*800;
-    starfish.style.left =   Math.random() * 900 + "px";
+    starfish.style.left =   Math.random() * 1200 + "px";
 
-    starfish.style.top =  Math.random() * 800 + "px";
+    starfish.style.top =  Math.random() * 650 + "px";
 
 
 };
@@ -127,12 +193,6 @@ button1.addEventListener("click", makeStarfish)
 var button2 = document.getElementById("fish2");
 
 
-
-
-
-
-
-
 function makeSquid() {
     var squid = document.createElement("div");
 
@@ -143,12 +203,14 @@ function makeSquid() {
 
     function position2() {
     // var randomNumber =Math.random()*800;
-    squid.style.left =   Math.random() * 850 + "px";
+    squid.style.left =   Math.random() * 1200 + "px";
 
-    squid.style.top =  Math.random() * 750 + "px";
+    squid.style.top =  Math.random() * 650 + "px";
 
 
 };
+setInterval(position2, 1000)
+
 };
 
 
@@ -157,16 +219,11 @@ button2.addEventListener("click", makeSquid)
 
 
 
-setInterval(position2, 1000)
+
 
 // THIS IS WHERE TURTLE STARTS!!!!!
 
 var button3 = document.getElementById("fish3");
-
-
-
-
-
 
 
 function makeTurtle() {
@@ -179,12 +236,13 @@ var turtle = document.createElement("div");
     turtle.classList.add("turtle");
 function position3() {
     // var randomNumber =Math.random()*800;
-    turtle.style.left =   Math.random() * 900 + "px";
+    turtle.style.left =   Math.random() * 1200 + "px";
 
-    turtle.style.top =  Math.random() * 800 + "px";
+    turtle.style.top =  Math.random() * 650 + "px";
 
 
 };
+setInterval(position3, 1000)
 };
 
 
@@ -193,7 +251,37 @@ button3.addEventListener("click", makeTurtle)
 
 
 
-setInterval(position3, 1000)
+// THIS IS WHERE SEAHORSE STARTS!!!!!
+
+var button4 = document.getElementById("fish4");
+
+
+function makeSeahorse() {
+
+var seahorse = document.createElement("div");
+
+    document.body.appendChild(seahorse);
+
+
+    seahorse.classList.add("seahorse");
+function position4() {
+    // var randomNumber =Math.random()*800;
+    seahorse.style.left =   Math.random() * 1250 + "px";
+
+    seahorse.style.top =  Math.random() * 650 + "px";
+
+
+};
+setInterval(position4, 1000)
+};
+
+
+button4.addEventListener("click", makeSeahorse)
+
+
+
+
+
 </script>
 
 </html>
