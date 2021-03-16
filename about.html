@@ -9,23 +9,19 @@
 
 <style type="text/css">
 			
-
 			table{
 				width:100%;
 				height: 30px;
 			}
 
-
 			td{
 				text-align: center;
-				border: 1px;
-				
+				border: 1px;	
 			}
 
 			body {background-color: lightblue;
 				margin:0px;
 			}
-
 
 			.box{background-color:lightblue;
 				transition:1s;
@@ -53,8 +49,7 @@
 			#title{
 				font-family: 'Playfair Display', serif;
 				font-size:50px;
-				color:black;
-				
+				color:black;	
 			}
 
 			#website{
@@ -62,20 +57,95 @@
 				font-size:70px;
 				color:black;
 			}
+
 			#spacing{
 				color:lightblue;
 			}
-a{
-	font-size:55px;
-	color:white;
-	text-decoration:none;
-	font-family: 'Playfair Display', serif;
-}
 
+			a{
+				font-size:55px;
+				color:white;
+				text-decoration:none;
+				font-family: 'Playfair Display', serif;
+			}
+
+			#cat{
+				width:230px;
+				height: 230px;
+				background-color:#b3c1c9;
+				border-radius:5%;
+				font-size: 15px;
+				margin-left: 1%;
+				margin-right: 2.5%;
+				display: inline-block;
+				position: absolute;
+				/*background-image: url(compsci.png);
+       	 background-repeat: no-repeat;
+        background-size: cover;*/
+			}
+
+			#dog{
+				width:230px;
+				height: 230px;
+				background-color:#b3c1c9;
+				border-radius:5%;
+				font-size: 15px;
+				margin-left: 21%;
+				margin-right: 2.5%;
+				display: inline-block;
+				position: absolute;
+			}
+
+			#bird{
+				width:230px;
+				height: 230px;
+				background-color:#b3c1c9;
+				border-radius:5%;
+				font-size: 15px;
+				margin-left: 41%;
+				margin-right: 2.5%;
+				display: inline-block;
+				position: absolute;
+			}
+
+			#fish{
+				width:230px;
+				height: 230px;
+				background-color:#b3c1c9;
+				border-radius:5%;
+				font-size: 15px;
+				margin-left: 61%;
+				margin-right: 2.5%;
+				display: inline-block;
+				position: absolute;
+			}
+
+			#turtle{
+				width:230px;
+				height: 230px;
+				background-color:#b3c1c9;
+				border-radius:5%;
+				font-size: 15px;
+				margin-left: 81%;
+				margin-right: 5%;
+				display: inline-block;
+				position: absolute;
+			}
+
+			#desc{
+				font-family: 'Playfair Display', serif;
+				font-size:20px;
+				color:black;
+				text-decoration:none;
+				margin-left:.5%;
+			}
+
+/*each div is about 15*/
 		</style>
 
 </head>
-<body>
+
+<script type="text/css"></script>
 
 	<div id="website"><center>Noémie's Website!!</center></div>
 
@@ -101,7 +171,166 @@ a{
 <p id="spacing"> hello</p>
 
 <div id="title"><center> About Me!</center>
-</div>
+
+<center><h1 id="desc">Here are some facts about me! Just click on a specific box to uncover the fact that correlates with the picture. Hope you enjoy!!</h1></center>
+
+
+<br>
+
+	<div id="cat"></div>
+
+	<div id="dog"></div>
+
+	<div id="bird"></div>
+
+	<div id="fish"></div>
+
+	<div id="turtle"></div>
+
+	<script type="text/javascript">
+		
+		var cat = document.getElementById("cat");
+
+var counter1 = 0;
+
+function changeImage1 (){
+
+	counter1 = counter1+1;
+
+
+		console.log(counter1);
+
+		if(counter1%2 == 1){
+
+			cat.style.backgroundColor = "#e3e6e8";
+			cat.innerText = "This is my first year of taking computer science! Before this class, I really had no idea about anything regarding coding. (I had a bit of an introduction in my 7th grade hackathon, but I had no idea what i was doing then :O). I definately plan on working and practicing more on coding in the future!!"
+		}
+
+		else if(counter1%2 == 0){
+
+			cat.style.backgroundColor = "#b3c1c9";
+			cat.innerText = " "
+		}
+
+	}
+
+		cat.addEventListener("click", changeImage1)
+
+
+var dog = document.getElementById("dog");
+
+var counter2 = 0;
+
+function changeImage2 (){
+
+	counter2 = counter2+1;
+
+
+		console.log(counter2);
+
+		if(counter2%2 == 1){
+
+			dog.style.backgroundColor = "#e3e6e8";
+			dog.innerText = "I live in NYC! I've lived here my whole life :)"
+		}
+
+		else if(counter2%2 == 0){
+
+			dog.style.backgroundColor = "#b3c1c9";
+			dog.innerText = " "
+		}
+
+	}
+
+		dog.addEventListener("click", changeImage2);
+
+
+
+var bird = document.getElementById("bird");
+
+var counter3 = 0;
+
+function changeImage3 (){
+
+	counter3 = counter3+1;
+
+
+		console.log(counter3);
+
+		if(counter3%2 == 1){
+
+			bird.style.backgroundColor = "#e3e6e8";
+			bird.innerText = "I am mixed! I am haitian, ecuadorian, and chinese."
+		}
+
+		else if(counter3%2 == 0){
+
+			bird.style.backgroundColor = "#b3c1c9";
+			bird.innerText = " "
+		}
+
+	}
+
+		bird.addEventListener("click", changeImage3);
+
+
+var fish = document.getElementById("fish");
+
+var counter4 = 0;
+
+function changeImage4 (){
+
+	counter4 = counter4+1;
+
+
+		console.log(counter4);
+
+		if(counter4%2 == 1){
+
+			fish.style.backgroundColor = "#e3e6e8";
+			fish.innerText = "I am an athelete, but more specifically, a lacrosse player! I've been playing for about 7-8 years and it's my favorite sport. Other sports I play/have played are soccer, basketball, and softball."
+		}
+
+		else if(counter4%2 == 0){
+
+			fish.style.backgroundColor = "#b3c1c9";
+			fish.innerText = " "
+		}
+
+	}
+
+		fish.addEventListener("click", changeImage4);
+
+
+var turtle = document.getElementById("turtle");
+
+var counter5 = 0;
+
+function changeImage5 (){
+
+	counter5 = counter5+1;
+
+
+		console.log(counter5);
+
+		if(counter5%2 == 1){
+
+			turtle.style.backgroundColor = "#e3e6e8";
+			turtle.innerText = "I also used to dance!! I tap danced, and also did hiphop and salsa with my younger brother :D"
+		}
+
+		else if(counter5%2 == 0){
+
+			turtle.style.backgroundColor = "#b3c1c9";
+			turtle.innerText = " "
+		}
+
+	}
+
+		turtle.addEventListener("click", changeImage5);
+
+	</script>
+
 
 </body>
 </html>
