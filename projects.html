@@ -42,12 +42,16 @@
 				margin-left: .75%
 			}
 		
-			#heading1{
+			.heading1{
 				font-family: 'Playfair Display', serif;
 				font-size:20px;
 				color:black;
 				text-decoration:none;
 				margin-left:.5%;
+			}
+			.heading1:hover{
+				color:red;
+				text-decoration: underline;
 			}
 
 			#desc{
@@ -56,9 +60,6 @@
 				color:black;
 				text-decoration:none;
 			}
-			/*#heading1:hover {background-color:#8ac7db;
-				transition:0.5s;
-			}*/
 
 			#title{
 				font-family: 'Playfair Display', serif;
@@ -75,6 +76,10 @@
 			#spacing{
 				color:lightblue;
 			}
+
+
+
+/*
 
 a{
 	font-size:55px;
@@ -119,6 +124,15 @@ a{
 <div id="desc">In this section, you can find my codesketches and projects! To check them out, all you have to do is click on the name of the respective codesketch (for example, if you click "The Aquarium!" you'll be able to find the link that codesketch). Hope you enjoy them!!</div>
 
 <br><br>
+
+<section>
+	<a href="rainbow.html"><h1 id="heading1">Random Color Picker *WARNING: potential flashing lights!*</h1></a>
+
+	<p id="text">In this codesketch, I coded so that every time you press the button in the middle of the screen, the background of the website changes colors. This codesketch uses a feature in javascript called Math.random, where it gives you a number within the range of 0 to 1, which you can then “scale to your desired range” by multiplying a certain number to it. In this case, I made the random numbers between 0 and 225, and let them be in the place of the rgb (red green blue) color model, since each number is a combination of a red, green, and blue-- each between 0 and 225. For example, the background color of this website is rgb(173, 216, 230). So in the codesketch I randomized each number in order to get a random color, and coded an event listener to change the color each time you click the button.
+</p>
+</section>
+
+<br>
 
 <section>
 	<a href="aquarium.html"><h1 id="heading1">The Aquarium!</h1></a>

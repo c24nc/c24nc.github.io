@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+	<title></title>
+
+	<style type="text/css">
+		
+		#cat{
+			width:100px;
+			height: 100px;
+			background-color:lightblue;
+			border-radius:10%;
+			position: relative;
+		}
+
+		#button{
+			width:200px;
+			height:75px;
+			font-family: 'Playfair Display', serif;
+			font-size: 20px;
+		}
+
+
+		body{
+		background-color: white;
+	}
+
+	</style>
+</head>
+<body id="rainbow">
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<center><button id="button">click me >:o</button></center>
+
+	<script type="text/javascript">
+		
+		var rainbow = document.getElementById("rainbow");
+
+
+var counter = 0;
+
+function changeImage (){
+
+	counter = counter+1;
+
+
+		console.log(counter);
+
+		if(counter%2 == 1){
+
+			rainbow.style.backgroundColor = "lightpink";
+			rainbow.innerText = "hello, I am a cat."
+		}
+
+		else if(counter%2 == 0){
+
+			ranbow.style.backgroundColor = "lightblue";
+			rainbow.innerText = "goodbye, I am a dog."
+		}
+
+	}
+
+
+	function randomColor (){
+
+		var randomNumber1 = Math.random()*255;
+		var randomNumber2= Math.random()*255;
+		var randomNumber3 = Math.random()*255;
+
+		rainbow.style.backgroundColor = "rgb("+randomNumber1 + "," + randomNumber2 + "," + randomNumber3+")"
+	}
+
+		button.addEventListener("click", randomColor);
+	</script>
+
+</body>
+</html>
